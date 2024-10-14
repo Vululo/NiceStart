@@ -35,20 +35,20 @@
 
     <ImageView
         android:id="@+id/foto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="74dp"
+        android:layout_height="80dp"
         android:layout_marginTop="56dp"
         android:src="@drawable/ic_action_name"
+        app:layout_constraintBottom_toTopOf="@id/layout1"
         app:layout_constraintEnd_toEndOf="@id/main"
         app:layout_constraintStart_toStartOf="@id/main"
-        app:layout_constraintTop_toTopOf="@id/main"
-        app:layout_constraintBottom_toTopOf="@id/layout1"/>
+        app:layout_constraintTop_toTopOf="@id/main" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layout1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="@id/guideline10"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/guideline9"
@@ -68,7 +68,7 @@
         android:id="@+id/layout2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="@id/guideline10"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/guideline9"
@@ -97,7 +97,8 @@
         app:layout_constraintEnd_toStartOf="@+id/b2"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="@id/guideline9"
-        app:layout_constraintTop_toTopOf="@id/main" />
+        app:layout_constraintTop_toBottomOf="@id/layout2"
+        app:layout_constraintVertical_bias="0.115" />
 
     <Button
         android:id="@+id/b2"
@@ -109,11 +110,8 @@
         app:layout_constraintBottom_toBottomOf="@id/main"
         app:layout_constraintEnd_toEndOf="@id/guideline10"
         app:layout_constraintStart_toEndOf="@id/b1"
-        app:layout_constraintTop_toTopOf="@id/main" />
-
-
-
-
+        app:layout_constraintTop_toBottomOf="@id/layout2"
+        app:layout_constraintVertical_bias="0.115" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
