@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context=".MainActivity">
+    tools:context=".Login">
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -58,12 +58,8 @@
 
         <EditText
             android:id="@+id/edit1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:alpha="0.6"
-            android:background="@color/white"
             android:hint="Nombre"
-            android:textColorHint="@color/white" />
+            style="@style/Layout1" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -93,27 +89,22 @@
 
     <Button
         android:id="@+id/b1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:backgroundTint="@color/verde1"
-        android:text="OK"
+        android:text="LOG IN"
         app:cornerRadius = "0dp"
         app:layout_constraintEnd_toEndOf="@id/guideline10"
         app:layout_constraintStart_toStartOf="@id/guideline9"
-        app:layout_constraintTop_toBottomOf="@id/layout2"/>
+        app:layout_constraintTop_toBottomOf="@id/layout2"
+        style="@style/Button1" />
 
     <Button
         android:id="@+id/b2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:backgroundTint="@color/verde1"
-        android:text="CANCEL"
+        android:text="SIGN UP"
+        android:onClick="openSignup"
         app:cornerRadius="0dp"
         app:layout_constraintEnd_toEndOf="@id/guideline10"
         app:layout_constraintStart_toStartOf="@id/guideline9"
-        app:layout_constraintTop_toBottomOf="@id/b1"/>
+        app:layout_constraintTop_toBottomOf="@id/b1"
+        style="@style/buttonlined" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

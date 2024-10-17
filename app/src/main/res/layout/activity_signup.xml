@@ -14,14 +14,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.70" />
+        app:layout_constraintGuide_percent="0.80" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.30" />
+        app:layout_constraintGuide_percent="0.20" />
 
 
     <ImageView
@@ -37,6 +37,7 @@
         android:id="@+id/foto"
         android:layout_width="74dp"
         android:layout_height="80dp"
+        android:layout_marginTop="56dp"
         android:src="@drawable/ic_action_name"
         app:layout_constraintBottom_toTopOf="@id/layout1"
         app:layout_constraintEnd_toEndOf="@id/main"
@@ -46,8 +47,8 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layout1"
         android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="@id/guideline10"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/guideline9"
@@ -64,7 +65,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layout2"
         android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="@id/guideline10"
         app:layout_constraintHorizontal_bias="0.0"
@@ -72,7 +73,6 @@
         app:layout_constraintTop_toBottomOf="@id/layout1"
         app:startIconDrawable="@drawable/ic_action_lock"
         app:passwordToggleEnabled="true"
-
         >
 
         <EditText
@@ -85,18 +85,61 @@
             android:textColorHint="@color/white" />
 
     </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline10"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline9"
+        app:layout_constraintTop_toBottomOf="@id/layout2"
+        app:startIconDrawable="@drawable/ic_action_lock"
+        app:passwordToggleEnabled="true"
+        >
+
+        <EditText
+            android:id="@+id/edit3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:background="@color/white"
+            android:hint="Confirmar contraseña"
+            android:textColorHint="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline10"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline9"
+        app:layout_constraintTop_toBottomOf="@id/layout3"
+        app:startIconDrawable="@drawable/ic_action_email"
+        >
+
+        <EditText
+            android:id="@+id/edit4"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:background="@color/white"
+            android:hint="E-mail"
+            android:textColorHint="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/b1"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="@color/verde1"
         android:text="LOG IN"
         app:cornerRadius = "0dp"
         app:layout_constraintEnd_toEndOf="@id/guideline10"
         app:layout_constraintStart_toStartOf="@id/guideline9"
-        app:layout_constraintTop_toBottomOf="@id/layout2"/>
+        app:layout_constraintTop_toBottomOf="@id/layout4"
+        style="@style/Button1" />
 
     <Button
         android:id="@+id/b2"
@@ -106,7 +149,7 @@
         app:layout_constraintEnd_toEndOf="@id/guideline10"
         app:layout_constraintStart_toStartOf="@id/guideline9"
         app:layout_constraintTop_toBottomOf="@id/b1"
-        style="@style/buttonlined"/>
+        style="@style/buttonlined" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
