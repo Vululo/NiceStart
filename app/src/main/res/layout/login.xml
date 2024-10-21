@@ -90,6 +90,7 @@
     <Button
         android:id="@+id/b1"
         android:text="LOG IN"
+        android:onClick="openMain"
         app:cornerRadius = "0dp"
         app:layout_constraintEnd_toEndOf="@id/guideline10"
         app:layout_constraintStart_toStartOf="@id/guideline9"
