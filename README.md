@@ -1,15 +1,21 @@
 ## Primera practica de desarrollo de interfaces
 
+### LOGIN:
 
->LOGIN:
+Vertical login:
 
-> Vertical login:
 ![LoginV](img/vartical_Login.png)
-> Land login
+
+ Land login
+
 ![LoginL](img/Land_login.png)
 
->SIGN UP:
-> Vertical Signup:
+### SIGN UP:
+
+Vertical Signup:
+
 ![LoginV](img/vertical_signup.png)
-> Land Signup
+
+Land Signup
+
 ![LoginV](img/Land_Signup.png)
