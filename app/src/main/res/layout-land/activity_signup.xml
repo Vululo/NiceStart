@@ -25,11 +25,10 @@
 
 
     <ImageView
-        android:id="@+id/foto1"
+        android:id="@+id/planeta"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitStart"
-        android:src="@drawable/planeta"
         app:layout_constraintStart_toStartOf="@+id/main"
         app:layout_constraintTop_toTopOf="@+id/main" />
 
@@ -124,7 +123,7 @@
     <Button
         android:id="@+id/b1"
         android:text="LOG IN"
-        android:onClick="openMain"
+        android:onClick="Signup_openProfile"
         app:cornerRadius = "0dp"
         app:layout_constraintEnd_toEndOf="@id/guideline10"
         app:layout_constraintStart_toStartOf="@id/guideline9"
@@ -134,7 +133,7 @@
     <Button
         android:id="@+id/b2"
         android:text="BACK"
-        android:onClick="openLogin"
+        android:onClick="Signup_openLogin"
         app:cornerRadius="0dp"
         app:layout_constraintEnd_toEndOf="@id/guideline10"
         app:layout_constraintStart_toStartOf="@id/guideline9"

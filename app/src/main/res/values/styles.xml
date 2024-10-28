@@ -37,6 +37,7 @@
         <item name="strokeColor">@android:color/white</item>
     </style>
 
+
     <style name="Theme.Nicestart.ActionBar.Transparent" parent="Theme.MaterialComponents.DayNight">
         <!-- Mantener el ActionBar y hacerlo superponer el contenido -->
         <item name="windowActionBar">true</item>

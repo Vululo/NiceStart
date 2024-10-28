@@ -25,17 +25,16 @@
 
 
     <ImageView
-        android:id="@+id/foto1"
+        android:id="@+id/planeta"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitStart"
-        android:src="@drawable/planeta"
         app:layout_constraintStart_toStartOf="@+id/main"
         app:layout_constraintTop_toTopOf="@+id/main" />
 
     <ImageView
         android:id="@+id/foto"
-        android:layout_width="74dp"
+        android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/ic_action_name"
         app:layout_constraintBottom_toTopOf="@id/layout1"
@@ -93,7 +92,7 @@
         android:layout_marginTop="10dp"
         android:backgroundTint="@color/verde1"
         android:text="LOG IN"
-        android:onClick="openMain"
+        android:onClick="openProfile"
         app:cornerRadius = "0dp"
         app:layout_constraintEnd_toEndOf="@id/guideline10"
         app:layout_constraintStart_toStartOf="@id/guideline9"
