@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,9 +28,13 @@ public class Splash extends AppCompatActivity {
         openApp();
 
         ImageView logo = findViewById(R.id.icono);
+        TextView txt = findViewById(R.id.texto);
 
-        Animation myanim = AnimationUtils.loadAnimation(this,R.anim.blink);
+        Animation myanim = AnimationUtils.loadAnimation(this,R.anim.splash_animation);
         logo.startAnimation(myanim);
+        Animation txtAnim = AnimationUtils.loadAnimation(this,R.anim.splash_text_anim);
+        txt.startAnimation(txtAnim);
+
 
 
 
