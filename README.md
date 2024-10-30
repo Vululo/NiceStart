@@ -8,7 +8,7 @@ De momento el proyecto solo cuenta con 3 actividades, LOGIN y SIGNUP, las cuales
 
 Vertical login:
 
-![LoginV](img/vartical_Login.png=250x)
+![LoginV](img/vartical_Login.png)
 
  Land login
 
