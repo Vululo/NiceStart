@@ -6,5 +6,6 @@
     <color name="azul2">#02735E</color>
     <color name="verde1">#0CF25D</color>
     <color name="TRANSPARENT">#00000000</color>
+    <color name="gray"></color>
 
 </resources>

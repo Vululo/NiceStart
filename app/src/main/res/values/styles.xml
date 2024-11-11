@@ -17,9 +17,10 @@
     <style name="Layout1">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:alpha">0.6</item>
+        <item name="android:alpha">0.5</item>
         <item name="android:background">@color/white</item>
-        <item name="android:textColorHint">@color/white</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
     <style name="buttonlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
