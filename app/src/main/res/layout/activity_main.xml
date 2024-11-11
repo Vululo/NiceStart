@@ -8,23 +8,36 @@
     android:background="@drawable/gradient"
     tools:context=".Main">
 
-    <ImageView
-        android:id="@+id/planeta"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/myswipe"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="fitStart"
-        app:layout_constraintStart_toStartOf="@+id/myLayout"
-        app:layout_constraintTop_toTopOf="@+id/myLayout" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        <!-- <ImageView
+           android:id="@+id/planeta"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:scaleType="fitStart"
+           app:layout_constraintStart_toStartOf="@+id/myLayout"
+           app:layout_constraintTop_toTopOf="@+id/myLayout" />
+           <ImageView
+               android:id="@+id/menu"
+               android:layout_width="112dp"
+               android:layout_height="112dp"
+               android:layout_marginTop="56dp"
+               android:background="@drawable/image_border"
+               app:layout_constraintEnd_toEndOf="@id/myLayout"
+               app:layout_constraintStart_toStartOf="@id/myLayout"
+               app:layout_constraintTop_toTopOf="@id/myLayout" />
+           -->
 
-    <ImageView
-        android:id="@+id/menu"
-        android:layout_width="112dp"
-        android:layout_height="112dp"
-        android:layout_marginTop="56dp"
-        android:background="@drawable/image_border"
-        app:layout_constraintEnd_toEndOf="@id/myLayout"
-        app:layout_constraintStart_toStartOf="@id/myLayout"
-        app:layout_constraintTop_toTopOf="@id/myLayout" />
-
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

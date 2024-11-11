@@ -1,8 +1,6 @@
-## Primera practica de desarrollo de interfaces
+ ## Creación y desarrollo de una aplicacción
 
-Aprendiendo como usar andriod studio y como crear actividades.
-
-De momento el proyecto solo cuenta con 3 actividades, LOGIN y SIGNUP, las cuales pueden navegar entre ellas, cada una cuenta con una vista vertcal y horizontal y una actividad Splash a modo de presentacion de la aplicación, la cual cuenta con varias animaciones que hacen la actividad más dinámica.
+El proyecto cuenta con 5 actividades, LOGIN , SIGNUP, las cuales pueden navegar entre ellas, cada una cuenta con una vista vertical y horizontal y una actividad Splash a modo de presentación de la aplicación, la cual cuenta con varias animaciones, una actividad con un perfil y un Main.
 
 ### LOGIN:
 
@@ -10,7 +8,7 @@ Vertical login:
 
 ![LoginV](img/vartical_Login.png)
 
- Land login
+Land login
 
 ![LoginL](img/Land_login.png)
 
@@ -79,3 +77,14 @@ Codigo de las animaciones del texto:
         android:duration="1000"/>
 </set>
 ```
+
+### Main:
+Esta actividad cuenta con un actionbar que contiene menu de opciones y un icono que te lleva a la actividad profile y un webview que ocupa toda la actividad el cual es una pagina que genera fotos de gente que no existe.
+
+
+
+### Profile:
+La actividad profile cuenta solo con un image view en el que se dispone la foto de perfil del usuario.
+
+
+>> Proyecto de Desarrollo de Interfaces de segundo de DAM.

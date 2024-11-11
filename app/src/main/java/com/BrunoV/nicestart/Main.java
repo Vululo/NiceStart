@@ -1,25 +1,34 @@
 package com.BrunoV.nicestart;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.snackbar.Snackbar;
 
 public class Main extends AppCompatActivity {
+
+    private SwipeRefreshLayout swipeLayout;
+    private WebView myWebView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +41,16 @@ public class Main extends AppCompatActivity {
             return insets;
         });
 
-        ImageView men= findViewById(R.id.menu);
-        registerForContextMenu(men);
+        /*ImageView men= findViewById(R.id.menu);
+        registerForContextMenu(men);*/
+
+        swipeLayout = findViewById(R.id.myswipe);
+        swipeLayout.setOnRefreshListener(mOnRefreshListener);
+        myWebView = findViewById(R.id.webView);
+        WebSettings webSettings = myWebView.getSettings();
+        webSettings.setLoadWithOverviewMode(true);
+        webSettings.setUseWideViewPort(true);
+        myWebView.loadUrl("https://www.thispersondoesnotexist.com/");
     }
 
     @Override
@@ -55,9 +72,25 @@ public class Main extends AppCompatActivity {
             startActivity(intent);
             return true;
         }
+        if(id == R.id.item3){
+            Snackbar snackbar = Snackbar
+                    .make(myWebView,"Descargando...",Snackbar.LENGTH_SHORT)
+                    .setAction("CANCELAR", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Snackbar snackbar1 = Snackbar.make(myWebView, "Cancelado", Snackbar.LENGTH_SHORT);
+                            snackbar1.show();
+                        }
+            });
+            snackbar.show();
+        }
+        if(id == R.id.item4){
+            showAlertDialogeButtonClicked(Main.this);
+        }
         return false;
     }
 
+    /*
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         getMenuInflater().inflate(R.menu.menu_context,menu);
@@ -87,5 +120,38 @@ public class Main extends AppCompatActivity {
             return true;
         }
         return false;
+    }*/
+    protected SwipeRefreshLayout.OnRefreshListener mOnRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
+        @Override
+        public void onRefresh() {
+            Toast.makeText(Main.this, "REFRESHING...", Toast.LENGTH_SHORT).show();
+            myWebView.reload();
+            swipeLayout.setRefreshing(false);
+        }
+    };
+    public void showAlertDialogeButtonClicked(Main mainActivity){
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
+        builder.setTitle("Exit");
+        builder.setMessage("Quieres salir?");
+        builder.setIcon(R.drawable.ic_action_user);
+        builder.setCancelable(true);
+
+        builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int which) {
+                // do something like...
+                System.exit(0);
+                dialogInterface.dismiss();
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }
