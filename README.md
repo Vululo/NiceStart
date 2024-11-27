@@ -79,7 +79,7 @@ Codigo de las animaciones del texto:
 ```
 
 ### Main:
-Esta actividad cuenta con un actionbar que contiene menu de opciones y un icono que te lleva a la actividad profile y un webview que ocupa toda la actividad el cual es una pagina que genera fotos de gente que no existe.
+Esta actividad cuenta con un actionbar que contiene menu de opciones , un icono que te lleva a la actividad profile y un webview que ocupa toda la actividad, el cual muestra una pagina que genera fotos de gente que no existe, pudiendo refrescar la actividad para que vaya generando diferentes tipos de personas.
 
 ![Main.jpg](img/Main.jpg)
 
