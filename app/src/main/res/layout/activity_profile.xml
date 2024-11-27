@@ -32,6 +32,7 @@
         app:layout_constraintStart_toStartOf="@+id/main"
         app:layout_constraintTop_toTopOf="@+id/main" />
 
+
     <ImageView
         android:id="@+id/perfil"
         android:layout_width="112dp"
