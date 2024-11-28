@@ -35,10 +35,6 @@ public class Splash extends AppCompatActivity {
         Animation txtAnim = AnimationUtils.loadAnimation(this,R.anim.splash_text_anim);
         txt.startAnimation(txtAnim);
 
-
-
-
-
         ImageView fondo  = findViewById(R.id.fondo);
 
         Glide.with(this)
