@@ -17,6 +17,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 //import com.airbnb.lottie.LottieAnimationView;
+import com.airbnb.lottie.LottieAnimationView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.google.android.material.snackbar.Snackbar;
@@ -35,13 +36,25 @@ public class Profile extends AppCompatActivity {
 
         ImageView perfil = findViewById(R.id.perfil);
 
+        LottieAnimationView perfilanim = findViewById(R.id.perfilanimado);
+
         perfil.setVisibility(View.VISIBLE);
+        perfilanim.setVisibility(View.INVISIBLE);
+
+        perfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                perfilanim.setVisibility(View.VISIBLE);
+                perfil.setVisibility(View.VISIBLE);
+            }
+        });
 
         Glide.with(this)
                 .load("https://static.vecteezy.com/system/resources/previews/016/778/853/original/planet-galaxy-space-free-png.png")
                 .centerCrop()
                 .transition(DrawableTransitionOptions.withCrossFade(500))
                 .into(perfil);
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

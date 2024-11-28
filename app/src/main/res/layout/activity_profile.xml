@@ -23,15 +23,6 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.20" />
 
-
-    <ImageView
-        android:id="@+id/planeta"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitStart"
-        app:layout_constraintStart_toStartOf="@+id/main"
-        app:layout_constraintTop_toTopOf="@+id/main" />
-
     <ImageView
         android:id="@+id/perfil"
         android:layout_width="112dp"
@@ -41,6 +32,29 @@
         app:layout_constraintEnd_toEndOf="@id/main"
         app:layout_constraintStart_toStartOf="@id/main"
         app:layout_constraintTop_toTopOf="@id/main" />
+
+    <ImageView
+        android:id="@+id/planeta"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitStart"
+        app:layout_constraintStart_toStartOf="@+id/main"
+        app:layout_constraintTop_toTopOf="@+id/main" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/perfilanimado"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="@+id/perfil"
+        app:layout_constraintTop_toTopOf="@+id/perfil"
+        app:layout_constraintBottom_toBottomOf="@+id/perfil"
+        app:layout_constraintStart_toStartOf="@+id/perfil"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/useranim"
+        tools:layout_editor_absoluteY="40dp" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
