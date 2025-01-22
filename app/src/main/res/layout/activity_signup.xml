@@ -57,7 +57,7 @@
 
         <EditText
             android:id="@+id/edit1"
-            android:hint="Nombre"
+            android:hint="@string/nombre"
             style="@style/Layout1" />
     </com.google.android.material.textfield.TextInputLayout>
 

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NiceStart</string>
+    <string name="nombre">Name</string>
+    <string name="contrasena">Password</string>
+    <string name="confirmar_contrasena">Confirm Password</string>
+</resources>

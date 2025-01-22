@@ -47,7 +47,7 @@
 
         <EditText
             android:id="@+id/edit1"
-            android:hint="Nombre"
+            android:hint="@string/nombre"
             style="@style/Layout1" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:background="@color/white"
-            android:hint="Contraseña"
+            android:hint="@string/contrasena"
             android:textColorHint="@color/white" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:background="@color/white"
-            android:hint="Confirmar contraseña"
+            android:hint="@string/confirmar_contrasena"
             android:textColorHint="@color/white" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -115,7 +115,7 @@
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:background="@color/white"
-            android:hint="E-mail"
+            android:hint="@string/e_mail"
             android:textColorHint="@color/white" />
 
     </com.google.android.material.textfield.TextInputLayout>
